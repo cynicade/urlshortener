@@ -1,0 +1,27 @@
+{
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.40",
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0"
+  },
+  "scripts": {
+    "start": "NODE_ENV=prod node ./dist/main.js",
+    "dev": "NODE_ENV=dev npx nodemon ./src/main.ts",
+    "build": "npx tsc",
+    "dockerize": "docker build . -t cynicade/minesweeper-backend"
+  }
+}
