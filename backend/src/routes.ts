@@ -38,7 +38,6 @@ router.post("/new", async (req, res) => {
 // whenever someone tries to access a shortened url, redirect them
 router.get("/:id", async (req, res) => {
   const original = await getOriginal(req.params.id);
-  console.log(original);
 
   if (original) {
     res.redirect(original);
