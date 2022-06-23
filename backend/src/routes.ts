@@ -42,12 +42,6 @@ router.get("/:id", async (req, res) => {
   if (original) {
     res.redirect(original);
   } else {
-    res
-      .send(
-        JSON.stringify({
-          message: "url not found",
-        })
-      )
-      .status(404);
+    res.redirect("https://cynicade.xyz/urls/404");
   }
 });
