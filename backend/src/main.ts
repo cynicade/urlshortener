@@ -17,14 +17,14 @@ app.use(
   })
 );
 // use router
-app.use("/api", router);
+app.use("/urls/api", router);
 
 // connect to database
 const mongoURI =
   process.env.NODE_ENV === "dev"
     ? process.env.MONGO_URI_LOCAL
     : `${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_URI}`;
-mongoose.connect(`mongodb://${mongoURI}/urls`, (err) => {
+mongoose.connect(`mongodb://${mongoURI}/urldb?authSource=admin`, (err) => {
   if (err) console.error("Could not connect to DB", err);
   else console.log("Connected to database");
 });

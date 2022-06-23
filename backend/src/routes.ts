@@ -24,7 +24,7 @@ router.post("/new", async (req, res) => {
     res
       .send(
         JSON.stringify({
-          url: `cynicade.xyz/urls/${shortened}`,
+          url: `cynicade.xyz/urls/api/${shortened}`,
         })
       )
       .status(200);
