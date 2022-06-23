@@ -5,6 +5,6 @@ COPY yarn.lock ./
 COPY tsconfig.json ./
 RUN yarn install
 COPY . .
-EXPOSE 3004
+EXPOSE 3005
 RUN yarn build
 CMD ["yarn", "start"]
