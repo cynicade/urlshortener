@@ -71,7 +71,7 @@ export const Main: React.FC = (): JSX.Element => {
         {showModal && (
           // <ModalWrapper setShowModal={setShowModal}>
           <ModalWrapper>
-            <Modal setShowModal={setShowModal} url={url} />
+            <Modal setShowModal={setShowModal} url={`https://${url}`} />
           </ModalWrapper>
         )}
       </AnimatePresence>
